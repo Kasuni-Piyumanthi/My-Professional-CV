@@ -1,5 +1,13 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+
+% --- Compact Page Layout ---
+\usepackage[
+  left=0.65in,
+  right=0.65in,
+  top=0.65in,
+  bottom=0.65in
+]{geometry}
+
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{parskip}
@@ -11,32 +19,39 @@
 % Olive Green Color
 \definecolor{verdeolivo}{RGB}{85,107,47}
 
-\titleformat{\section}{\large\bfseries\color{verdeolivo}}{}{0em}{}[\titlerule]
-\titleformat{\subsection}[runin]{\bfseries\color{verdeolivo}}{}{0em}{}[]
+% --- Tighter Section Spacing ---
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\titlespacing*{\subsection}{0pt}{6pt}{4pt}
+
+% --- Smaller Section Titles ---
+\titleformat{\section}
+  {\large\bfseries\color{verdeolivo}}
+  {}{0em}{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+  {\bfseries\color{verdeolivo}}
+  {}{0em}{}
+
+% --- Reduce Item Spacing ---
+\setlist[itemize]{itemsep=2pt, topsep=2pt}
+
 
 \begin{document}
 \pagestyle{empty}
 
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+
 
 % LEFT SIDE (Name + Title + Contact)
-\begin{tabular}{l}
-{\Huge \textbf{Kasuni \textbf{JAYASEKARA}}}\\[2mm]
-{\large Computer Science Undergraduate}\\[3mm]
+\noindent
+{\Huge \textbf{Kasuni Jayasekara}}\\[1mm]
+{\large \textbf{Computer Science Undergraduate}}\\[3mm]
+\faIcon{linkedin}~\href{https://www.linkedin.com/in/kasuni-jayasekara-16a578303}{Kasuni Jayasekara} \\
+\faIcon{github}~\href{https://github.com/Kasuni-Piyumanthi}{Kasuni-Piyumanthi} \\
+\faIcon{phone}~\href{https://wa.me/94767127030}{+94 76 712 7030} \\
+\faIcon{envelope}~\href{mailto:kpiyumanthi@gmail.com}{kpiyumanthi@gmail.com}\\
 
-\faIcon{linkedin}~\href{https://www.linkedin.com/in/kasuni-jayasekara}{Kasuni Jayasekara}\\
-\faIcon{github}~\href{https://github.com/Kasuni-Piyumanthi}{Kasuni-Piyumanthi}\\
-\faIcon{phone}~\href{https://wa.me/94767127030}{+94 76 712 7030}\\
-\faIcon{envelope}~kpiyumanthi@gmail.com\\
 
-\end{tabular}
 
-&
-% RIGHT SIDE (Photo with downward shift)
-\vspace{8mm}%
-\includegraphics[width=3.3cm]{professional photo.jpeg}
-
-\end{tabular*}
 
 
 % ==========================================
@@ -52,34 +67,28 @@ My academic projects and studies have given me a strong foundation in software d
 
 \subsection*{BSc (Hons) Computer Science (Sep 2024 – Present)}
 
-\textbf{University of Westminster, UK} \\
+\textbf{University of Westminster, UK} 
 
 \textbf{1st Year (120 credits):} Software Development I (Python), Mathematics for Computing, Trends in Computer Science, Software Development II (Java), Computer Systems Fundamentals, Web Design and Development. 
 
 \textbf{2nd Year:} Object Oriented Programming, Database System, Software Development Group Project, Information Technology Security, Client-Server
-Architectures, Algorithms: Theory, Design and Implementation. 
+Architectures, Algorithms: Theory, Design and Implementation.
 
 \subsection*{Diploma in Computer Application (Jan 2024 – July 2024)}
-
-\textbf{Sarvodaya - Fusion} \\
-Overall Grade : B
+\textbf{Sarvodaya - Fusion}
 
 \subsection*{Diploma in Computer Science (Jan 2024 – Nov 2024)}
-
-\textbf{Sarvodaya - Fusion} \\
-Overall Grade : A
+\textbf{Sarvodaya - Fusion} 
 
 \subsection*{Diploma in Spoken English (Feb 2024 – April 2024)}
-
-\textbf{Britishway English Academy} \\
-Distinction Pass
+\textbf{Britishway English Academy} 
 
 \subsection*{G.C.E. Advanced Level (2023)}
-\textbf{Central College Kuliyapitiya}\\
+\textbf{Central College Kuliyapitiya}
 3S's (Physical Science Stream) 
 
 \subsection*{ G.C.E. Ordinary Level (2020)}
-\textbf{Central College Kuliyapitiya}\\
+\textbf{Central College Kuliyapitiya}
 7A, 2B 
 
 % ==========================================
@@ -87,14 +96,29 @@ Distinction Pass
 % ==========================================
 \section*{\faIcon{code} Projects}
 
-\subsection*{Stray Animal Welfare App (Group) \hfill(Oct 2025 – Ongoing)}
-\subsection*{Quiz-App (Individual) \hfill(Sep 2025 – Ongoing)}
-\subsection*{Coffee-Shop-Web-SIte (Individual) \hfill(June 2025 – July 2025)}
-\subsection*{EuroFlight-Insight (Individual) \hfill(May 2025 - June 2025)}
-\subsection*{Life Below Water Website (Group) \hfill(Feb 2025 – Mar 2025)}
-\subsection*{Traffic-Data (Individual) \hfill(Nov 2024 - Dec 2024)}
+\subsection*{Stray Care - Stray Animal Welfare App (Group) : Java Script, Node JS, React Native, Python\\ \hfill(Oct 2025 – Ongoing)}
+\textit{}\\
+StrayCare is a mobile app designed to help rescue injured stray dogs, connect pet owners with nearby veterinary services, and support adoption and lost and found cases through a single unified platform.
 
+\subsection*{Brain Beat - Quiz App (Individual) : React JS \hfill(Sep 2025 – Ongoing)}
+\textit{}\\
+In this quiz app you can update your own questions and multiple options. This React JS Project Quiz app will display the score after submitting the answers for  all questions.
 
+\subsection*{Coffee Avenue - Web Site (Individual) : HTML, CSS and JavaScript \hfill(June 2025 – July 2025)}
+\textit\\
+A responsive and interactive Coffee shop web site.
+
+\subsection*{EuroFlight Insight - Airport Data Analysis System (Individual) : Python \hfill(May 2025 - June 2025)}
+\textit\\
+A pyhon project that analyze data visualize air traffic departure data from European airports.
+
+\subsection*{Life Below Water - Website (Group) : HTML and CSS \hfill(Feb 2025 – Mar 2025)}
+\textit\\
+A collaborative website project promoting SDG awareness.
+
+\subsection*{Traffic Data Analysis System (Individual) : Python \hfill(Nov 2024 - Dec 2024)}
+\textit\\
+A python project that performs data validation, processing and analysis on traffic survey data sets.
 
 
 % ==========================================
@@ -102,58 +126,42 @@ Distinction Pass
 % ==========================================
 \section*{\faHandsHelping \; Volunteering Experiences}
 \subsection*{ IEEE Computational Intelligence Society of IIT}\\
-\textit\\
+
 \textit\\
 \textbf{ConnectX (Event Vice Chair) \hfill(Sep 2025 – Oct 2025)}
-\begin{itemize}
-    \item Coordinated with the IEEE CIS board, managed event planning, and handled participant engagement to ensure a smooth industry visit series.
-\end{itemize}
 \textit\\
+Coordinated with the IEEE CIS board, managed event planning, and handled participant engagement to ensure a smooth industry visit series.
+
 \textbf{PRESTIGE (Secretarial Volunteering member) \hfill(Feb 2025 – June 2025)}
-\begin{itemize}
-    \item Supported event operations by drafting captions, preparing email communications, and managing participant registrations during event days.
-\end{itemize}
+\textit\\
+Supported event operations by drafting captions, preparing email communications, and managing participant registrations during event days.
 
 \subsection*{ IEEE Women in Engineering Affinity Group of IIT}\\
 \textit\\
-\textit\\
 \textbf{Fusion by WSO2 (Organizing Committee) \hfill(Nov 2025 – Ongoing)}
-\begin{itemize}
-    \item Organizing a one day workshop introducing students to the Site Reliability Engineering (SRE) role, including sessions by WSO2 representatives on internships and career insights, and an IIT intern sharing their experience.
-\end{itemize}
 \textit\\
+Organizing a one day workshop introducing students to the Site Reliability Engineering (SRE) role, including sessions by WSO2 representatives on internships and career insights, and an IIT intern sharing their experience.
+
 \textbf{AdaptIQ (Logistic Volunteering member) \hfill(Aug 2025 – Oct 2025)}
-\begin{itemize}
-    \item Assisted in organizing regional workshops and managing logistics for the first round and grand finals, ensuring smooth operations for participants across Sri Lanka.
-\end{itemize}
 \textit\\
+Assisted in organizing regional workshops and managing logistics for the first round and grand finals, ensuring smooth operations for participants across Sri Lanka.
+
 \textbf{SyncUp (Logistic Volunteering member) \hfill(June 2025 – Aug 2025)}
-\begin{itemize}
-    \item Supported pre-event preparations including hall setup and decorations, and assisted during the two-day event to ensure smooth execution.
-\end{itemize}
+\textit\\
+Supported pre-event preparations including hall setup and decorations, and assisted during the two-day event to ensure smooth execution.
+
+\subsection*{ IEEE Student Branch - Informatics Institute of Technology}\\
+
+\textit\\
+\textbf{JamborIEEE Zone D (Volunteering member from IIT) \hfill(July 2025 – November 2025)}
+\textit\\
+Assisted in coordinating event operations and logistics for JamborIEEE 2025, collaborating with six IEEE Student Branches.
+
 \subsection*{ The Students’ Union of the Informatics Institute of Technology (IIT)}\\
 \textit\\
 \textbf{Stage Craft 2025 (Logistic Volunteering member) \hfill(May 2025)}
-\begin{itemize}
-    \item Managed backstage operations and coordinated the Dynamites dance team, supporting seamless execution of performances during the event.
-\end{itemize}
-\subsection*{ IIT Sports Council}\\
 \textit\\
-\textbf{SHEletics 2025 (Volunteering member) \hfill(Feb 2025 - Mar 2025)}
-\begin{itemize}
-    \item Assisted with pre-event setup and logistical arrangements for the Women’s Day celebration, ensuring smooth execution of the sports activities.
-\end{itemize}
-\textit\\
-\textbf{Sportsmeet 2025 (Volunteering member) \hfill(Jun 2025 - Aug 2025)}
-\begin{itemize}
-    \item Provided logistical and operational support for various sports matches, helping manage schedules, equipment, and participant coordination to ensure successful event execution.
-\end{itemize}
-\textit\\
-\textbf{Awards Night 2025 (Committee member) \hfill(Jun 2025 - Aug 2025)}
-\begin{itemize}
-    \item Assisted in preparing and managing certificates and awards, including drafting before the event and handling distribution on the event day.
-\end{itemize}
-
+Managed backstage operations and coordinated the Dynamites dance team, supporting seamless execution of performances during the event.
 
 
 
@@ -163,33 +171,51 @@ Distinction Pass
 \section*{\faIcon{certificate} Certifications}
 \subsection*{  ADVANCED TIER, CodeRally 6.0 Hackathon}\\
 \textit\\
-\begin{itemize}
-    \item  Competed as a part of team Hacktics-CR138 in CodeRally 6.0 hosted by the IEEE Computer Society Student Branch Chapter of IIT.Achieved selection to the ADVANCED TIER based on selection week performance, showcasing technical skills, collaboration, and innovative problem-solving under competitive conditions.
-\end{itemize}
+Competed as a part of team Hacktics-CR138 in CodeRally 6.0 hosted by the IEEE Computer Society Student Branch Chapter of IIT.Achieved selection to the ADVANCED TIER based on selection week performance, showcasing technical skills, collaboration, and innovative problem-solving under competitive conditions.
+
 \subsection*{UoW - Problem-Solving International Hackathon 2025}\\
 \textit\\
-\begin{itemize}
-    \item  Participated for a hackathon as a team of 4 members first time.
-\end{itemize}
+Participated for a hackathon as a team of 4 members first time.
+
 \subsection*{SHErlock 2.0}\\
 \textit\\
-\begin{itemize}
-    \item  participated as a part of team Hopkins in SHErlock 2.0 hosted by the IEEE Women in Engineering Affinity Group of IIT.
-\end{itemize}
+participated as a part of team Hopkins in SHErlock 2.0 hosted by the IEEE Women in Engineering Affinity Group of IIT.
+
 
 % ==========================================
 %              Extra Curricular Activities
 % ==========================================
-\section*{\faIcon{language}Extra Curricular Activities}
-\begin{itemize}[label=\faIcon{globe}]
-    \item English — Fluent
-    \item Sinhala — Native
+\section*{\faIcon{users} Extra Curricular Activities}
+\begin{itemize}
+    \item  Publicity and Visibility Lead of the IEEE Women in Engineering Affinity Group of IIT \\ (Selected Term 2026)
+    \item  Member of IEEE Student Branch of IIT (2024 - Present)
+    \item  Member of IEEE Computational Intelligence Society of IIT (2024 - Present)
+    \item  Member of IEEE Computer Society SBC of IIT (2024 - Present)
+    \item Member of the Leo Club of IIT (2024 - Present)
+    \item Member of the Rotaract Club of IIT (2024 - Present)
+    \item Volunteer Member of IIT Sports Council (2025/26)
+    \item Member of Shakthi Media Unit (2015 - 2023)
+    \item Team Leader of Girl Guide Association (2015 - 2020)
 \end{itemize}
 
 % ==========================================
 %               REFERENCES
 % ==========================================
 \section*{\faIcon{thumbs-up} References}
-Available upon request.
+\textit\\
+\begin{minipage}[t]{0.48\textwidth} 
+\textbf{Mr. M.S.Amarawickrama} \\[1mm]
+Visiting Lecturer , IIT \\[1mm]
+\faIcon{phone} +94 76 620 1619 \\[1mm]
+\faIcon{envelope} malithsrineth@gmail.com\\[1mm]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+
+\textbf{Mr. S.K.G.Jayathilaka} \\[1mm]
+CEO , Udubaddawa Nenasala & Future Tec Institution \\[1mm]
+\faIcon{phone} +94 76 741 4854 \\[1mm]
+\faIcon{envelope} santhushaj@gmail.com\\[1mm]
+\end{minipage}
 
 \end{document}
